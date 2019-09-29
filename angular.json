@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "show-random-pic": {
+      "projectType": "library",
+      "root": "projects/show-random-pic",
+      "sourceRoot": "projects/show-random-pic/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/show-random-pic/tsconfig.lib.json",
+            "project": "projects/show-random-pic/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/show-random-pic/src/test.ts",
+            "tsConfig": "projects/show-random-pic/tsconfig.spec.json",
+            "karmaConfig": "projects/show-random-pic/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/show-random-pic/tsconfig.lib.json",
+              "projects/show-random-pic/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "derek-libs"
 }

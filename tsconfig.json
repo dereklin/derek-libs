@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "show-random-pic": [
+        "dist/show-random-pic"
+      ],
+      "show-random-pic/*": [
+        "dist/show-random-pic/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
